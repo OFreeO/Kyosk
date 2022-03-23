@@ -1,6 +1,6 @@
 ﻿namespace Sushi
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -71,45 +71,45 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button1.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.Location = new System.Drawing.Point(12, 308);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 70);
             this.button1.TabIndex = 1;
-            this.button1.Text = "스시";
+            this.button1.Text = "제품제고";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button2.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.Location = new System.Drawing.Point(163, 308);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(123, 70);
             this.button2.TabIndex = 2;
-            this.button2.Text = "튀김/  사이드";
+            this.button2.Text = "재료현황";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button3.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.Location = new System.Drawing.Point(314, 308);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(127, 70);
             this.button3.TabIndex = 3;
-            this.button3.Text = "음료";
+            this.button3.Text = "주문현황";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("굴림", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.Location = new System.Drawing.Point(465, 308);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(125, 70);
             this.button4.TabIndex = 4;
-            this.button4.Text = "디저트";
+            this.button4.Text = "외주현황";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -154,6 +154,7 @@
             this.button5.TabIndex = 5;
             this.button5.Text = "추가";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Time_Label
             // 
@@ -199,7 +200,7 @@
             this.listBox1.Size = new System.Drawing.Size(577, 136);
             this.listBox1.TabIndex = 9;
             // 
-            // Form1
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,8 +215,8 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Main";
+            this.Text = "주문판";
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox2.ResumeLayout(false);

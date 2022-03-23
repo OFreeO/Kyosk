@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace Sushi
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
             DBManager dm = new DBManager();
 
-        public Form1()
+        public Main()
         {
             InitializeComponent();
         }
@@ -22,6 +22,8 @@ namespace Sushi
         private void WriteLog(string contents)
         {
             string content = contents;
+            DBManager.PrintLog(content);
+            listBox1.Items.Insert(0, content);
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -39,7 +41,7 @@ namespace Sushi
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DBManager.menus;
-            listBox1.add
+
 
         }
 
@@ -52,6 +54,7 @@ namespace Sushi
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DBManager.menus;
+
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -63,6 +66,7 @@ namespace Sushi
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DBManager.menus;
+
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -74,6 +78,19 @@ namespace Sushi
 
             dataGridView1.DataSource = null;
             dataGridView1.DataSource = DBManager.menus;
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+            int i = dataGridView1.CurrentRow.Index;
+            string name = dataGridView1.Rows[i].Cells[0].Value.ToString();
+
+            string content = $"{name} 추가됨";
+
+            WriteLog(content);
+
         }
     }
 }

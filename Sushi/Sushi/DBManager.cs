@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,6 +69,21 @@ namespace Sushi
             }
 
             Myconn.Close();
+        }
+
+        public static void PrintLog(string contents)
+        {
+            DirectoryInfo di = new DirectoryInfo("OrderHistory");
+
+            if (!di.Exists)
+            {
+                di.Create();
+            }
+
+            using(StreamWriter w = new StreamWriter("OrderHistory\\OrderHistory.txt"))
+            {
+                w.WriteLine(contents);
+            }
         }
     }
 }
